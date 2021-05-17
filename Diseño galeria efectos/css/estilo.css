@@ -1,0 +1,440 @@
+*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	   
+	}
+
+	body {
+		background-color: rgb(14, 13, 13);
+	}
+
+/*-------estilo contenedor----------*/
+
+.contenedor-galeria{
+	width: 75em;
+	height: 170em;
+	margin: auto;
+	padding: 0%;
+	background-color: gray;
+	border: solid 5px white;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+   flex-flow: row wrap ;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+  
+}
+
+/*-----estilo de titulo---*/
+.titulo{
+	margin: 0;
+	width: 100%;
+	height: 5%;
+   background-color: gray;
+	}
+	
+	h1{
+		color: white;
+		text-align: center;
+		margin: 0;
+		padding: 5%;
+		
+		
+	}
+
+/*----------estilo de elementos----------*/
+
+.elemento-fila1, 
+.elemento-fila2, 
+.elemento-fila3, 
+.elemento-fila4{
+	
+	margin: 2em;
+	width: 70em;
+	height: 30em;
+	background: gray;
+	text-align:center;
+	align-content: center;
+	
+}
+
+/*-----------------efecto fila1---------------*/
+
+
+.contenedor{
+	margin: 1em;
+	width: 68em;
+	height: 26em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.contenedor figure{
+	
+	width:35em;
+	height:26em;
+	margin:0;
+	margin-top: 2em;
+	position: relative;
+	transition: all ease .6s;
+	transform-style: preserve-3d;
+	transform: perspective(1500px) rotateY(0deg); 
+}
+ 
+ .contenedor figure img{
+	object-fit: contain; 
+	height: auto;
+ }
+
+.contenedor:hover figure{
+	-webkit-transform: perspective(1500px) rotateY(180deg);
+	-ms-transform:perspective(1500px) rotateY(180deg);
+	-o-transform:perspective(1500px) rotateY(180deg);
+	transform: perspective(1500px) rotateY(180deg);
+}
+
+figure .frontal,
+figure .trasera{
+	border-radius: 10px;
+	margin: 2em;
+	width: 90%;
+	height: 88%;
+	transition: all ease .6s;
+	-webkit-box-shadow:0px 10px 15px -5px rgba(0,0,0,0.65);
+ -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+ box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+
+}
+
+figure .frontal{
+	display: block;
+
+
+}
+
+figure .trasera{
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: perspective(1500px) rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.tarjeta2{
+	right: 2%;
+}
+.tarjeta1{
+	left: 2%;
+}
+
+
+
+
+/*-------------efecto de fila2------------*/
+
+
+.elemento-fila2 figure{
+	margin: 3em 1em 1em;
+	position: relative;
+	overflow: hidden;
+}
+
+.elemento-fila2 figure:hover img{
+	opacity: 0.5;
+	transition: .3s;
+}
+
+.iconos{
+	
+	position: absolute;
+	bottom: -350px;
+	width: 25%;
+	padding: 4%;
+	margin: 6em ;
+	margin-left: 10em;
+
+}
+.iconos img{
+	transition: .2s;
+	margin: 0 1em 1em ;
+	width: 2em;
+	height:auto;
+}
+
+.elemento-fila2 figure:hover .iconos{
+	
+	bottom: 0px;
+}
+
+
+/*-----------efecto fila3--------*/
+
+.elemento-fila3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ .contenedor3-img{
+	height: 22.7em;
+	width: 60.5em;
+	background-color: gray;
+	overflow: hidden;
+	position: relative;
+
+}
+
+
+.contenedor3-img:after{
+
+	content: "";
+	margin-left: 2%;
+	width: 20em;
+	height: 37em;
+	background: gray;
+	position: absolute;
+	opacity: 0.4;
+	transition: all .1s;
+}
+
+.contenedor3-img:hover:after{
+transform: rotate(56deg) translateY(285px) translateX(-150px);
+}
+
+.elemento-fila3 figure:hover img{
+	transition: .2s;
+}
+
+.iconos2{
+	
+	position: absolute;
+	bottom: -190px;
+	width: 25%;
+	padding: 3%;
+	margin: 0;
+	left: 70%;
+
+}
+.iconos2 img{
+	transition: .2s;
+	margin: 5%;
+	width: 2em;
+	height:auto;
+}
+
+.elemento-fila3 figure:hover .iconos2{
+	bottom: 0px;
+}
+
+
+
+/*------------- css de fila 4------------------*/
+
+
+.elemento-fila4{
+display: flex;
+align-content: center;
+align-items: center;
+justify-content: center;
+flex-wrap: nowrap;
+flex-direction: row;
+
+}
+.elemento-fila4 .contenedor-img1, .contenedor-img2{
+   
+	overflow: hidden;
+	margin-left: 0.5%;
+}
+
+
+.elemento-fila4 img{
+	transition: .2s;
+	height: auto;
+-webkit-box-shadow:0px 10px 15px -5px rgba(0,0,0,0.65);
+ -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+ box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+}
+
+
+.contenedor-img2 img:hover {
+transform: scale(1.2);
+ }
+
+.contenedor-img1 img:hover {
+transform: scale(1.2);
+ }
+
+
+
+
+
+
+
+/*------------responsive--------------*/
+
+@media screen and (max-width :800px) {
+ .titulo{
+ backface-visibility: hidden;
+ visibility: hidden;
+ width: 0;
+ height: 0;
+ }
+}
+
+
+@media screen and (max-width: 900px) {
+	figure .trasera{
+
+		visibility: hidden;
+		transform: perspective(1500px) rotateY(0deg);
+	}
+}
+
+@media screen and (max-width: 900px) {
+.contenedor:hover figure{
+	-webkit-transform: perspective(1500px) rotateY(0deg);
+	-ms-transform:perspective(1500px) rotateY(0deg);
+	-o-transform:perspective(1500px) rotateY(0deg);
+	transform: perspective(1500px) rotateY(0deg);
+
+}
+}
+@media screen and (max-width :800px) {
+	.contenedor-galeria{
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		border:none;
+	}
+
+@media screen and (max-width :800px) {
+ .elemento-fila1,
+ .elemento-fila2,
+ .elemento-fila3,
+ .elemento-fila4{
+ 	    margin: 0;
+ 	    padding: 0;
+    	width: 100%;
+    	height: 100%;
+    	display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	align-items: center;
+    	align-content: center;
+
+ }
+}
+@media screen and (max-width :800px) {
+	.elemento-fila1 .contenedor{
+		flex-wrap: wrap;
+		margin: 0;
+ 	    padding: 0;
+    	width: 100%;
+    	height: 100%;
+    	display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	align-items: center;
+    	align-content: center;
+	}
+}
+@media screen and (max-width :800px) {
+.tarjeta1, .tarjeta2{
+right: 0;
+left: 0;
+}
+}
+
+@media screen and (max-width :800px) {
+	.elemento-fila3 .contenedor3-img{
+		flex-wrap: wrap;
+		margin: 0;
+ 	    padding: 0;
+    	width: 100%;
+    	height: 100%;
+    	display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	align-items: center;
+    	align-content: center;
+	}
+}
+
+@media screen and (max-width :800px) {
+	.elemento-fila1 figure, .elemento-fila2 figure,
+	 .elemento-fila3 figure,{
+
+margin:0;
+padding: 0;
+}
+}
+
+
+@media screen and (max-width :800px) {
+
+.contenedor3-img:after{
+
+	content: "";
+	margin-top: 45%;
+	margin-left: 59%;
+	width: 20em;
+	height: 35em;
+	background: gray;
+	position: absolute;
+	opacity: 0.4;
+	transition: all .1s;
+
+}
+}
+@media screen and (max-width :700px) {
+.contenedor3-img:hover:after{
+	background: none;
+	backface-visibility: hidden;
+	transform:none;
+}
+}
+@media screen and (max-width :700px) {
+.contenedor3-img:after{
+	visibility: hidden;
+}
+
+@media screen and (max-width :800px) {
+
+	.elemento-fila3 figcaption{
+		left: 50%;
+
+}
+}
+
+@media screen and (max-width :800px) {
+
+	.elemento-fila2 .iconos{
+		left: 10%;
+}
+}
+
+@media screen and (max-width :600px) {
+.elemento-fila2 .iconos{
+	backface-visibility: hidden;
+	visibility: hidden;
+}
+}
+
+@media screen and (max-width :900px) {
+ .iconos2{
+right: 5%;
+ }
+}
+
+
